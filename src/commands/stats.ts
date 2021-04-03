@@ -1,5 +1,5 @@
 import { Embed } from "./../utils/Embed.ts";
-import { botID, cache } from "../../deps.ts";
+import { cache } from "../../deps.ts";
 import { createCommand } from "../utils/helpers.ts";
 
 createCommand({
@@ -25,7 +25,7 @@ createCommand({
       .addField("Cached Members:", cachedMemberCount.toLocaleString(), true)
       .addField("Channels:", cache.channels.size.toLocaleString(), true)
       .addField("Messages:", cache.messages.size.toLocaleString(), true)
-      .addField("Deno Version:", `v${Deno.version.deno}`, true)
+      .addField("Deno Version:", `V${Deno.version.deno}`, true)
       .setTimestamp();
 
     return message.send({ embed });
